@@ -1,0 +1,11 @@
+{
+  "name": "synchro-tutorial",
+  "version": "1.3.5",
+  "description": "Synchro Turorial",
+  "main": "main",
+  "author": "Bob Dickinson <bob@synchro.io> (http://synchro.io/)",
+  "private": true,
+  "engines": { "synchro": ">= 1.3.5" },
+  "synchro": { "clientVersion": ">=1.3.0" },
+  "synchroArchiveUrl": "https://github.com/SynchroLabs/SynchroTutorial/archive/master.zip"
+}
