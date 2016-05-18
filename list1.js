@@ -8,9 +8,9 @@ exports.View =
     elements:
     [
         { control: "stackpanel", orientation: "Vertical", width: "*", contents: [
-            { control: "listview", select: "Single", height: "*", width: "*", binding: "people", itemTemplate:
+            { control: "listview", select: "Single", width: "*", binding: "people", itemTemplate:
                 { control: "stackpanel", orientation: "Horizontal", width: "*", padding: 5, contents: [
-                    { control: "image", resource: imgUser, height: 50, width: 50 },
+                    { control: "image", resource: imgUser, height: 50, width: 50, verticalAlignment: "Center" },
                     { control: "stackpanel", orientation: "Vertical", contents: [
                         { control: "text", value: "{first}" },
                         { control: "text", value: "{last}" },

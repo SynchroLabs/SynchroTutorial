@@ -1,5 +1,7 @@
 // View that receives data from parent, returns edits to parent
 //
+// Note: This view is navigated to from the list3 tutorial view (not from the main view)
+//
 exports.InitializeViewModel = function(context, session, params, state) {
     return {
         firstName: params.person.first,

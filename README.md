@@ -2,7 +2,7 @@
 
 This app is intended to be installed into a [Synchro Server](https://synchro.io) environment using the [Synchro Command Line Interface](https://www.npmjs.com/package/synchro) tool.
 
-The Synchro Tutorial app contains all of the code from the Synchro Tutorial located at: (https://support.synchro.io/hc/en-us/sections/204233727-Tutorial).
+The Synchro Tutorial app contains all of the code from the Synchro Tutorial located at: https://support.synchro.io/hc/en-us/sections/204233727-Tutorial
 
 ## Installing Synchro Tutorial
 

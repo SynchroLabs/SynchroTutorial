@@ -15,11 +15,11 @@ exports.View =
             { control: "text", value: "Loading...", foreground: "Red", font: { size: 24, bold: true }, verticalAlignment: "Center" },
         ] },
         { control: "stackpanel", orientation: "Vertical", width: "*", contents: [
-            { control: "listview", select: "None", height: "*", width: "*", 
+            { control: "listview", select: "None", width: "*", 
               binding: { items: "people", onItemClick: { command: "onSelected", person: "{$data}", index: "{$index}" } }, 
               itemTemplate:
                 { control: "stackpanel", orientation: "Horizontal", width: "*", padding: 5, contents: [
-                    { control: "image", resource: imgUser, height: 50, width: 50 },
+                    { control: "image", resource: imgUser, height: 50, width: 50, verticalAlignment: "Center" },
                     { control: "stackpanel", orientation: "Vertical", contents: [
                         { control: "text", value: "{first}" },
                         { control: "text", value: "{last}" },
