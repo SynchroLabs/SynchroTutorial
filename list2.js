@@ -8,10 +8,7 @@ exports.View =
     elements:
     [
         { control: "stackpanel", orientation: "Vertical", visibility: "{isLoading}", contents: [
-            { select: "First", contents: [
-                { filter: { deviceMetric: "os", is: "Web" }, control: "progressring", width: 300, value: "{isLoading}", verticalAlignment: "Center" },
-                { control: "progressring", value: "{isLoading}", verticalAlignment: "Center" },
-            ] },
+            { control: "progressring", value: "{isLoading}", verticalAlignment: "Center" },
             { control: "text", value: "Loading...", foreground: "Red", font: { size: 24, bold: true }, verticalAlignment: "Center" },
         ] },
         { control: "stackpanel", orientation: "Vertical", width: "*", visibility: "{!isLoading}", contents: [
