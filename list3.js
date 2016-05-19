@@ -2,6 +2,38 @@
 //
 var imgUser = Synchro.getResourceUrl("user.png");
 
+exports.InitializeViewModel = function(context, session, params, state)
+{
+    var viewModel = state;
+    if (viewModel == null)
+    {
+        viewModel = { isLoading: true };
+    }
+    else if (session.updatedPerson)
+    {
+        viewModel.people[session.updatedPerson.index] = session.updatedPerson.person;
+        delete session.updatedPerson;
+    }
+
+    return viewModel;
+}
+
+exports.LoadViewModel = function * (context, session, viewModel)
+{
+    if (viewModel.people === undefined)
+    {
+        yield Synchro.yieldAwaitable(context, function(callback){ setTimeout(callback, 4000) });
+        viewModel.people = [
+             { first: "Betsy", last: "Braddock" }, 
+             { first: "Steven", last: "Rogers" }, 
+             { first: "Natasha", last: "Romanoff" }, 
+             { first: "Tony", last: "Stark" }, 
+             { first: "Wade", last: "Wilson" }, 
+        ];
+        viewModel.isLoading = false;
+    }
+}
+
 exports.View =
 {
     title: "List 3",
@@ -25,37 +57,6 @@ exports.View =
             },
         ] },
     ]
-}
-
-exports.InitializeViewModel = function(context, session, params, state)
-{
-    var viewModel = state;
-    if (viewModel == null)
-    {
-        viewModel = { isLoading: true };
-    }
-    else if (session.updatedPerson)
-    {
-        viewModel.people[session.updatedPerson.index] = session.updatedPerson.person;
-    }
-
-    return viewModel;
-}
-
-exports.LoadViewModel = function * (context, session, viewModel)
-{
-    if (viewModel.people === undefined)
-    {
-        yield Synchro.yieldAwaitable(context, function(callback){ setTimeout(callback, 4000) });
-        viewModel.people = [
-             { first: "Betsy", last: "Braddock" }, 
-             { first: "Steven", last: "Rogers" }, 
-             { first: "Natasha", last: "Romanoff" }, 
-             { first: "Tony", last: "Stark" }, 
-             { first: "Wade", last: "Wilson" }, 
-        ];
-        viewModel.isLoading = false;
-    }
 }
 
 exports.Commands = 

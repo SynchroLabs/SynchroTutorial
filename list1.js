@@ -2,6 +2,19 @@
 //
 var imgUser = Synchro.getResourceUrl("user.png");
 
+exports.InitializeViewModel = function(context, session, params, state)
+{
+    return {
+        people: [
+             { first: "Betsy", last: "Braddock" }, 
+             { first: "Steven", last: "Rogers" }, 
+             { first: "Natasha", last: "Romanoff" }, 
+             { first: "Tony", last: "Stark" }, 
+             { first: "Wade", last: "Wilson" }, 
+        ],
+    }
+}
+
 exports.View =
 {
     title: "List 1",
@@ -19,17 +32,4 @@ exports.View =
             },
         ] },
     ]
-}
-
-exports.InitializeViewModel = function(context, session, params, state)
-{
-    return {
-        people: [
-             { first: "Betsy", last: "Braddock" }, 
-             { first: "Steven", last: "Rogers" }, 
-             { first: "Natasha", last: "Romanoff" }, 
-             { first: "Tony", last: "Stark" }, 
-             { first: "Wade", last: "Wilson" }, 
-        ],
-    }
 }

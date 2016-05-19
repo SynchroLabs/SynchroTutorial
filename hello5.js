@@ -9,7 +9,7 @@ exports.InitializeViewModel = function(context, session) {
 
 exports.View =
 {
-    title: "Hello World",
+    title: "Hello World 5",
     elements:
     [
         { control: "edit", binding: "firstName", placeholder: "first name" },
