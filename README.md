@@ -17,7 +17,7 @@ Alternatively, you may use Git to install this app and keep it up to date.  To d
 $ synchro add SynchroTutorial synchro-tutorial
 ```
 
-## Updating Synchro Samples
+## Updating Synchro Tutorial
 
 If you installed this app using `synchro install`, then you may update it (getting the most recent version) at any time by doing:
 
